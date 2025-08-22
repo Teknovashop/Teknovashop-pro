@@ -1,18 +1,43 @@
+// app/page.js
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+import { headers } from 'next/headers';
 
 import CarouselTop from '@/components/CarouselTop';
 import SidebarProducts from '@/components/SidebarProducts';
 import CategoryGrid from '@/components/CategoryGrid';
 import NewsList from '@/components/NewsList';
 
-async function fetchNews(){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL ?? ''}/api/news`, { cache: 'no-store' });
-  if(!res.ok) return { items: [] };
-  return res.json();
+// --- Helper: construye una URL absoluta válida tanto en Vercel como en local ---
+function getBaseUrl() {
+  // 1) Preferimos variables de entorno si existen
+  const env = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL;
+  if (env) {
+    // VERCEL_URL suele venir sin protocolo; NEXT_PUBLIC_SITE_URL normalmente ya lo incluye
+    return env.startsWith('http') ? env : `https://${env}`;
+  }
+
+  // 2) Fallback: construir desde cabeceras (útil en SSR)
+  const h = headers();
+  const proto = h.get('x-forwarded-proto') ?? 'https';
+  const host = h.get('host') ?? 'localhost:3000';
+  return `${proto}://${host}`;
 }
 
-export default async function Home(){
-  const { items } = await fetchNews();
+async function fetchNews() {
+  try {
+    const base = getBaseUrl();
+    const res = await fetch(`${base}/api/news`, { cache: 'no-store' });
+    if (!res.ok) return { items: [] };
+    return res.json();
+  } catch {
+    return { items: [] };
+  }
+}
+
+export default async function Home() {
+  const { items = [] } = await fetchNews();
 
   return (
     <div className="space-y-8">
