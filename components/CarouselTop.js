@@ -1,5 +1,6 @@
 'use client';
-import Slider from 'react-slick';
+import dynamic from 'next/dynamic';
+const Slider = dynamic(() => import('react-slick').then(m => m.default), { ssr: false });
 import Image from 'next/image';
 import Link from 'next/link';
 import products from '@/data/products.json';
