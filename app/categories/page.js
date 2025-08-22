@@ -1,0 +1,1 @@
+import CategoryGrid from '@/components/CategoryGrid';export const metadata={title:'Categorías — Teknovashop'};export default function Page(){return(<div className='space-y-6'><h1 className='text-3xl font-bold'>Categorías</h1><CategoryGrid/></div>)}

@@ -1,0 +1,1 @@
+export async function POST(req){const {email}=await req.json();if(!email||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){return Response.json({ok:false},{status:400});}console.log('Subscribe:',email);return Response.json({ok:true});}

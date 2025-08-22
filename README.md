@@ -1,1 +1,1 @@
-# Teknovashop-pro
+# Teknovashop Pro\n\nPortal de noticias y tienda afiliada. Despliega en Vercel sin .env.\n

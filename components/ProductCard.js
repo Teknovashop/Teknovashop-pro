@@ -1,0 +1,3 @@
+
+'use client';import Image from 'next/image';import {motion} from 'framer-motion';
+export default function ProductCard({product}){return(<motion.article whileHover={{y:-4,scale:1.01}} className='rounded-2xl bg-gray-900 border border-gray-800 p-4 flex flex-col'><div className='relative aspect-[4/3] w-full overflow-hidden rounded-xl mb-3 bg-black/20'><Image src={product.image} alt={product.title} fill className='object-cover' sizes='(max-width:768px) 100vw, 33vw'/></div><h3 className='font-semibold line-clamp-2 mb-1'>{product.title}</h3><p className='text-gray-400 text-sm mb-3'>{product.price}</p><a href={product.url} target='_blank' className='mt-auto inline-flex justify-center px-4 py-2 rounded-xl bg-brand-500 hover:bg-brand-600'>Ver oferta</a></motion.article>);}

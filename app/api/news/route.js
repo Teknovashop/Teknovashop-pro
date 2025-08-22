@@ -1,0 +1,1 @@
+import { getNews } from '@/app/lib/news';export const revalidate=3600;export async function GET(){const items=await getNews(10);return Response.json({items});}
