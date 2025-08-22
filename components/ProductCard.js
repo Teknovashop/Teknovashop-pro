@@ -1,21 +1,30 @@
-import Image from 'next/image';
-import Link from 'next/link';
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
 
-export default function ProductCard({ p }){
+export default function ProductCard({ p }) {
+  const img = p.image || '/images/placeholder-product.png'
   return (
-    <div className="card flex gap-4">
-      <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-gray-100">
-        <Image src={p.image} alt={p.title} fill sizes="96px" className="object-cover"/>
+    <div className="rounded-xl border p-3 bg-white shadow-sm">
+      <div className="relative h-52 w-full overflow-hidden rounded-lg">
+        <Image
+          src={img}
+          alt={p.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
+          priority={false}
+        />
       </div>
-      <div className="min-w-0">
-        <h3 className="font-semibold line-clamp-2">{p.title}</h3>
-        <div className="mt-1 text-sm text-gray-500">{p.price}</div>
-        <div className="mt-2">
-          <Link href={p.url} target="_blank" rel="nofollow noopener" className="rounded-lg bg-brand-600 px-3 py-1.5 text-white">
-            Ver oferta
-          </Link>
-        </div>
-      </div>
+      <h3 className="mt-3 line-clamp-2 font-semibold">{p.title}</h3>
+      {p.price && <p className="text-sm text-gray-600 mt-1">{p.price}</p>}
+      <Link
+        href={p.url}
+        className="mt-3 inline-flex rounded-lg bg-brand-600 px-3 py-2 text-white hover:bg-brand-700"
+        target="_blank" rel="nofollow sponsored noopener"
+      >
+        Ver precio
+      </Link>
     </div>
-  );
+  )
 }
