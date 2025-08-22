@@ -2,15 +2,21 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      // Amazon
       { protocol: 'https', hostname: 'm.media-amazon.com' },
       { protocol: 'https', hostname: 'images-na.ssl-images-amazon.com' },
       { protocol: 'https', hostname: 'images-eu.ssl-images-amazon.com' },
-      // SHEIN (varía por región)
       { protocol: 'https', hostname: 'img.ltwebstatic.com' },
       { protocol: 'https', hostname: 'img.shein.com' },
       { protocol: 'https', hostname: 'ishein.oss-accelerate.aliyuncs.com' },
-    ],
+      { protocol: 'https', hostname: 'cdn.pixabay.com' },
+      { protocol: 'https', hostname: 'images.pexels.com' },
+      { protocol: 'https', hostname: 'i.blogs.es' }, // Xataka images
+      { protocol: 'https', hostname: 'cdn.vox-cdn.com' }
+    ]
   },
-};
-module.exports = nextConfig;
+  experimental: {
+    serverActions: { allowedOrigins: ['*'] }
+  }
+}
+
+export default nextConfig
