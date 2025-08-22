@@ -1,65 +1,162 @@
 [
   {
-    "id": 1,
-    "title": "Smartwatch Active Inteligente, Pantalla, Deportes",
-    "price": "49,99 €",
-    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=800&auto=format&fit=crop",
+    "id": "amz-01",
+    "title": "Producto destacado #1",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-01.png",
+    "url": "https://amzn.to/4p6s84v",
+    "badges": [
+      "Top ventas",
+      "Mejor valorado"
+    ],
     "category": "tecnologia",
-    "featured": true,
-    "url": "https://www.amazon.es/Active-Inteligente-Smartwatch-Pantalla-Deportivos/dp/B0F8B2776S?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=2e0e569dc235fdfb4c3f17380f5cfef8&language=es_ES&ref_=as_li_ss_tl"
+    "rating": 4.7,
+    "reviews": 3022,
+    "video": "/videos/prod-01.mp4"
   },
   {
-    "id": 2,
-    "title": "Mochila 40x20x25 (Cabina), portátil",
-    "price": "19,95 €",
-    "image": "https://images.unsplash.com/photo-1520974735194-7f4b1d9b5b9b?q=80&w=800&auto=format&fit=crop",
+    "id": "amz-02",
+    "title": "Producto destacado #2",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-02.png",
+    "url": "https://amzn.to/4mxCloK",
+    "badges": [
+      "Top ventas",
+      "Mejor valorado"
+    ],
+    "category": "hogar",
+    "rating": 4.6,
+    "reviews": 629,
+    "video": "/videos/prod-02.mp4"
+  },
+  {
+    "id": "amz-03",
+    "title": "Producto destacado #3",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-03.png",
+    "url": "https://amzn.to/3JmywnM",
+    "badges": [
+      "Top ventas",
+      "Mejor valorado"
+    ],
+    "category": "moda",
+    "rating": 4.8,
+    "reviews": 4152,
+    "video": "/videos/prod-03.mp4"
+  },
+  {
+    "id": "amz-04",
+    "title": "Producto destacado #4",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-04.png",
+    "url": "https://amzn.to/3JqV2vL",
+    "badges": [
+      "Mejor valorado",
+      "Top ventas"
+    ],
     "category": "deportes",
-    "featured": true,
-    "url": "https://www.amazon.es/40x20x25-Equipaje-Mochilas-Ordenador-Port%C3%A1til/dp/B0D176VK55?linkCode=ll1&tag=teknovashop25-21"
+    "rating": 4.2,
+    "reviews": 1936,
+    "video": "/videos/prod-04.mp4"
   },
   {
-    "id": 3,
-    "title": "Reloj inteligente IOWODO con llamadas",
-    "price": "39,99 €",
-    "image": "https://images.unsplash.com/photo-1518609571773-39b7d303a82f?q=80&w=800&auto=format&fit=crop",
-    "category": "tecnologia",
-    "featured": true,
-    "url": "https://www.amazon.es/IOWODO-Inteligente-Smartwatch-Llamadas-Bluetooth/dp/B0CGR2BSDV?linkCode=ll1&tag=teknovashop25-21"
-  },
-  {
-    "id": 4,
-    "title": "Cinturón CHAOREN automático",
-    "price": "17,99 €",
-    "image": "https://images.unsplash.com/photo-1544441892-221874a8d17e?q=80&w=800&auto=format&fit=crop",
+    "id": "amz-05",
+    "title": "Producto destacado #5",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-05.png",
+    "url": "https://amzn.to/4lCSnwp",
+    "badges": [
+      "Recomendado",
+      "Mejor valorado"
+    ],
     "category": "belleza",
-    "featured": false,
-    "url": "https://www.amazon.es/CHAOREN-Cintur%C3%B3n-Pattern-Negro-90-100cm-Gesamtl%C3%A4nge/dp/B08T7JY5JM?linkCode=ll1&tag=teknovashop25-21"
+    "rating": 4.7,
+    "reviews": 162,
+    "video": "/videos/prod-05.mp4"
   },
   {
-    "id": 5,
-    "title": "Tarjetero antirrobo AKIELO RFID",
-    "price": "16,99 €",
-    "image": "https://images.unsplash.com/photo-1585386959984-a4155223165f?q=80&w=800&auto=format&fit=crop",
+    "id": "amz-06",
+    "title": "Producto destacado #6",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-06.png",
+    "url": "https://amzn.to/3UHdJxv",
+    "badges": [
+      "Oferta flash",
+      "Mejor valorado"
+    ],
     "category": "tecnologia",
-    "featured": false,
-    "url": "https://www.amazon.es/AKIELO-Monedero-Bloqueo-Titular-Tarjeta/dp/B076FXWC3F?linkCode=ll1&tag=teknovashop25-21"
+    "rating": 4.6,
+    "reviews": 256,
+    "video": "/videos/prod-06.mp4"
   },
   {
-    "id": 6,
-    "title": "Auriculares inalámbricos Bluetooth IPX7",
-    "price": "25,99 €",
-    "image": "https://images.unsplash.com/photo-1518442932279-3c23fd9e1d89?q=80&w=800&auto=format&fit=crop",
-    "category": "tecnologia",
-    "featured": false,
-    "url": "https://www.amazon.es/Auriculares-Inal%C3%A1mbricos-Bluetooth-Inalambricos-Impermeable/dp/B0CCDNJS75?linkCode=ll1&tag=teknovashop25-21"
+    "id": "amz-07",
+    "title": "Producto destacado #7",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-07.png",
+    "url": "https://amzn.to/41mvp5f",
+    "badges": [
+      "Nuevo",
+      "Oferta flash"
+    ],
+    "category": "hogar",
+    "rating": 4.3,
+    "reviews": 3225,
+    "video": "/videos/prod-07.mp4"
   },
   {
-    "id": 7,
-    "title": "Kindle 2024 e‑reader",
-    "price": "129,99 €",
-    "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
-    "category": "tecnologia",
-    "featured": true,
-    "url": "https://www.amazon.es/kindle-2024/dp/B0CP31JRLK?linkCode=ll1&tag=teknovashop25-21"
+    "id": "amz-08",
+    "title": "Producto destacado #8",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-08.png",
+    "url": "https://amzn.to/47fux6p",
+    "badges": [
+      "Recomendado",
+      "Mejor valorado"
+    ],
+    "category": "moda",
+    "rating": 4.6,
+    "reviews": 1721,
+    "video": "/videos/prod-08.mp4"
+  },
+  {
+    "id": "amz-09",
+    "title": "Producto destacado #9",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-09.png",
+    "url": "https://amzn.to/41iAWK8",
+    "badges": [
+      "Recomendado",
+      "Oferta flash"
+    ],
+    "category": "deportes",
+    "rating": 4.7,
+    "reviews": 135,
+    "video": "/videos/prod-09.mp4"
+  },
+  {
+    "id": "amz-10",
+    "title": "Producto destacado #10",
+    "subtitle": "Selección curada • Enlace de afiliado",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-10.png",
+    "url": "https://amzn.to/45Izylh",
+    "badges": [
+      "Nuevo",
+      "Top ventas"
+    ],
+    "category": "belleza",
+    "rating": 4.2,
+    "reviews": 991,
+    "video": "/videos/prod-10.mp4"
   }
 ]
