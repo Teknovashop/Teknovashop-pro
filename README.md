@@ -1,13 +1,18 @@
-# Teknovashop Pro (Next.js 14)
 
-Tienda + noticias tech con afiliación Amazon.
+# Teknovashop Pro (Ready-to-deploy)
+
+Tienda tech + noticias (Next.js 14).  
+- Carrusel *Top ventas* (react-slick)  
+- Sidebar *Ofertas rápidas*  
+- Noticias en español (RSS)  
+- Landing de categorías y rutas dinámicas `/categories/[slug]`  
+- Newsletter básico (API simulada)  
+- `vercel.json` con CRON diario 06:00 UTC para refrescar noticias.  
 
 ## Despliegue rápido
-1. Sube todo a un repositorio nuevo en GitHub.
-2. Importa el repo en Vercel (Root: `./`). Sin variables .env necesarias.
-3. Deploy.
+1. Sube todo este repo a GitHub.
+2. En Vercel, importa el proyecto. **Root Directory:** `./`
+3. Variables (ya incluidas): `NEXT_PUBLIC_SITE_URL`, `NEWS_FEEDS_ES`.  
+4. Deploy.
 
-## Scripts
-- `npm run dev`
-- `npm run build` / `npm run vercel-build`
-- `npm start`
+> Edita `data/products.json` para cambiar productos. Coloca imágenes en `/public/images` y referencia su ruta en el JSON.

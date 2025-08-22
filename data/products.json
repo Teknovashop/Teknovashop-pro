@@ -1,162 +1,165 @@
 [
   {
     "id": "amz-01",
-    "title": "Producto destacado #1",
-    "subtitle": "Selección curada • Enlace de afiliado",
+    "title": "Smartwatch Active Inteligente",
+    "subtitle": "Gadget imprescindible",
     "price_text": "Consulta la oferta",
-    "image": "/images/prod-01.png",
+    "image": "/images/prod-01.jpg",
     "url": "https://amzn.to/4p6s84v",
     "badges": [
       "Top ventas",
-      "Mejor valorado"
+      "Smartwatch"
     ],
     "category": "tecnologia",
-    "rating": 4.7,
-    "reviews": 3022,
-    "video": "/videos/prod-01.mp4"
+    "rating": 4.6,
+    "reviews": 100,
+    "featured": true,
+    "sidebar": true
   },
   {
     "id": "amz-02",
-    "title": "Producto destacado #2",
-    "subtitle": "Selección curada • Enlace de afiliado",
+    "title": "Mochila 40x20x25 (Cabina), portátil",
+    "subtitle": "Apta cabina",
     "price_text": "Consulta la oferta",
-    "image": "/images/prod-02.png",
+    "image": "/images/prod-02.jpg",
     "url": "https://amzn.to/4mxCloK",
     "badges": [
-      "Top ventas",
-      "Mejor valorado"
+      "Viaje",
+      "Cabina"
     ],
     "category": "hogar",
     "rating": 4.6,
-    "reviews": 629,
-    "video": "/videos/prod-02.mp4"
+    "reviews": 137,
+    "featured": true,
+    "sidebar": true
   },
   {
     "id": "amz-03",
-    "title": "Producto destacado #3",
-    "subtitle": "Selección curada • Enlace de afiliado",
+    "title": "Reloj inteligente IOWODO con llamadas",
+    "subtitle": "Bluetooth, llamadas",
     "price_text": "Consulta la oferta",
-    "image": "/images/prod-03.png",
+    "image": "/images/prod-03.jpg",
     "url": "https://amzn.to/3JmywnM",
     "badges": [
-      "Top ventas",
-      "Mejor valorado"
-    ],
-    "category": "moda",
-    "rating": 4.8,
-    "reviews": 4152,
-    "video": "/videos/prod-03.mp4"
-  },
-  {
-    "id": "amz-04",
-    "title": "Producto destacado #4",
-    "subtitle": "Selección curada • Enlace de afiliado",
-    "price_text": "Consulta la oferta",
-    "image": "/images/prod-04.png",
-    "url": "https://amzn.to/3JqV2vL",
-    "badges": [
-      "Mejor valorado",
-      "Top ventas"
-    ],
-    "category": "deportes",
-    "rating": 4.2,
-    "reviews": 1936,
-    "video": "/videos/prod-04.mp4"
-  },
-  {
-    "id": "amz-05",
-    "title": "Producto destacado #5",
-    "subtitle": "Selección curada • Enlace de afiliado",
-    "price_text": "Consulta la oferta",
-    "image": "/images/prod-05.png",
-    "url": "https://amzn.to/4lCSnwp",
-    "badges": [
-      "Recomendado",
-      "Mejor valorado"
-    ],
-    "category": "belleza",
-    "rating": 4.7,
-    "reviews": 162,
-    "video": "/videos/prod-05.mp4"
-  },
-  {
-    "id": "amz-06",
-    "title": "Producto destacado #6",
-    "subtitle": "Selección curada • Enlace de afiliado",
-    "price_text": "Consulta la oferta",
-    "image": "/images/prod-06.png",
-    "url": "https://amzn.to/3UHdJxv",
-    "badges": [
-      "Oferta flash",
-      "Mejor valorado"
+      "Llamadas"
     ],
     "category": "tecnologia",
     "rating": 4.6,
-    "reviews": 256,
-    "video": "/videos/prod-06.mp4"
+    "reviews": 174,
+    "featured": true,
+    "sidebar": true
+  },
+  {
+    "id": "amz-04",
+    "title": "Cinturón CHAOREN automático",
+    "subtitle": "Acabado premium",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-04.jpg",
+    "url": "https://amzn.to/3JqV2vL",
+    "badges": [
+      "Moda"
+    ],
+    "category": "belleza",
+    "rating": 4.6,
+    "reviews": 211,
+    "featured": true,
+    "sidebar": true
+  },
+  {
+    "id": "amz-05",
+    "title": "Tarjetero antirrobo AKIELO RFID",
+    "subtitle": "Slim wallet",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-05.jpg",
+    "url": "https://amzn.to/4lCSnwp",
+    "badges": [
+      "RFID",
+      "Slim"
+    ],
+    "category": "tecnologia",
+    "rating": 4.6,
+    "reviews": 248,
+    "featured": true,
+    "sidebar": true
+  },
+  {
+    "id": "amz-06",
+    "title": "Auriculares Bluetooth IPX7",
+    "subtitle": "Estuche de carga",
+    "price_text": "Consulta la oferta",
+    "image": "/images/prod-06.jpg",
+    "url": "https://amzn.to/3UHdJxv",
+    "badges": [
+      "Audio"
+    ],
+    "category": "tecnologia",
+    "rating": 4.6,
+    "reviews": 285,
+    "featured": true,
+    "sidebar": true
   },
   {
     "id": "amz-07",
-    "title": "Producto destacado #7",
-    "subtitle": "Selección curada • Enlace de afiliado",
+    "title": "Kindle 2024 e-reader",
+    "subtitle": "Pantalla nítida",
     "price_text": "Consulta la oferta",
-    "image": "/images/prod-07.png",
+    "image": "/images/prod-07.jpg",
     "url": "https://amzn.to/41mvp5f",
     "badges": [
-      "Nuevo",
-      "Oferta flash"
+      "E‑reader"
     ],
-    "category": "hogar",
-    "rating": 4.3,
-    "reviews": 3225,
-    "video": "/videos/prod-07.mp4"
+    "category": "tecnologia",
+    "rating": 4.6,
+    "reviews": 322,
+    "featured": true,
+    "sidebar": true
   },
   {
     "id": "amz-08",
-    "title": "Producto destacado #8",
-    "subtitle": "Selección curada • Enlace de afiliado",
+    "title": "Lámpara LED ambiente",
+    "subtitle": "RGB, regulable",
     "price_text": "Consulta la oferta",
-    "image": "/images/prod-08.png",
+    "image": "/images/prod-08.jpg",
     "url": "https://amzn.to/47fux6p",
     "badges": [
-      "Recomendado",
-      "Mejor valorado"
+      "Decoración"
     ],
-    "category": "moda",
+    "category": "hogar",
     "rating": 4.6,
-    "reviews": 1721,
-    "video": "/videos/prod-08.mp4"
+    "reviews": 359,
+    "featured": true,
+    "sidebar": true
   },
   {
     "id": "amz-09",
-    "title": "Producto destacado #9",
-    "subtitle": "Selección curada • Enlace de afiliado",
+    "title": "Smart scale balanza inteligente",
+    "subtitle": "Mediciones corporales",
     "price_text": "Consulta la oferta",
-    "image": "/images/prod-09.png",
+    "image": "/images/prod-09.jpg",
     "url": "https://amzn.to/41iAWK8",
     "badges": [
-      "Recomendado",
-      "Oferta flash"
+      "Salud"
     ],
     "category": "deportes",
-    "rating": 4.7,
-    "reviews": 135,
-    "video": "/videos/prod-09.mp4"
+    "rating": 4.6,
+    "reviews": 396,
+    "featured": true,
+    "sidebar": true
   },
   {
     "id": "amz-10",
-    "title": "Producto destacado #10",
-    "subtitle": "Selección curada • Enlace de afiliado",
+    "title": "Cámara de acción 4K",
+    "subtitle": "Estabilización",
     "price_text": "Consulta la oferta",
-    "image": "/images/prod-10.png",
+    "image": "/images/prod-10.jpg",
     "url": "https://amzn.to/45Izylh",
     "badges": [
-      "Nuevo",
-      "Top ventas"
+      "Acción"
     ],
-    "category": "belleza",
-    "rating": 4.2,
-    "reviews": 991,
-    "video": "/videos/prod-10.mp4"
+    "category": "deportes",
+    "rating": 4.6,
+    "reviews": 433,
+    "featured": true,
+    "sidebar": true
   }
 ]

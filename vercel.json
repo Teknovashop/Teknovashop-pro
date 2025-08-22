@@ -7,8 +7,6 @@
   ],
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://teknovashop-pro.vercel.app",
-    "NEWS_FEEDS_ES": "https://www.xataka.com/tag/inteligencia-artificial/rss2.xml,https://www.xataka.com/tag/tecnologia/rss2.xml,https://www.genbeta.com/feed,https://hipertextual.com/tag/tecnologia/feed,https://news.google.com/rss?hl=es-419&gl=ES&ceid=ES:es&q=inteligencia%20artificial%20OR%20tecnolog%C3%ADa",
-    "SITE_URL": "https://teknovashop-pro.vercel.app",
-    "REFRESH_TOKEN": "un_token_secreto_seguro"
+    "NEWS_FEEDS_ES": "https://www.xataka.com/tag/inteligencia-artificial/rss2.xml,https://www.xataka.com/tag/tecnologia/rss2.xml,https://www.genbeta.com/feed,https://hipertextual.com/tag/tecnologia/feed,https://news.google.com/rss?hl=es-419&gl=ES&ceid=ES:es&q=inteligencia%20artificial%20OR%20tecnolog%C3%ADa"
   }
 }
