@@ -1,1 +1,12 @@
-'use client';import products from '@/data/products.json';export default function SidebarProducts(){const quick=products.slice(0,6);return(<aside className='space-y-3'><h3 className='text-lg font-semibold'>Ofertas rápidas</h3><div className='space-y-3'>{quick.map(p=>(<a key={p.id} href={p.url} target='_blank' className='block rounded-2xl bg-gray-900 border border-gray-800 p-4 hover:bg-gray-800/60'><div className='font-medium'>{p.title}</div><div className='text-sm text-gray-400'>{p.price}</div></a>))}</div></aside>);}
+import products from '@/data/products.json';
+import ProductCard from './ProductCard';
+
+export default function SidebarProducts(){
+  const picks = products.slice(0,6);
+  return (
+    <aside className="space-y-3">
+      <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Ofertas rápidas</h3>
+      {picks.map(p => <ProductCard key={p.id} p={p} />)}
+    </aside>
+  );
+}

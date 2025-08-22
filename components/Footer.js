@@ -1,1 +1,9 @@
-export default function Footer(){return(<footer className='mt-16 border-t border-gray-800'><div className='container py-8 text-sm text-gray-400'>© 2025 Teknovashop.</div></footer>);}
+export default function Footer(){
+  return (
+    <footer className="border-t border-gray-200">
+      <div className="container py-6 text-sm text-gray-500">
+        © 2025 Teknovashop — Enlaces de afiliado: podemos recibir comisión sin coste extra para ti.
+      </div>
+    </footer>
+  );
+}

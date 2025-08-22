@@ -1,3 +1,21 @@
+import Image from 'next/image';
+import Link from 'next/link';
 
-'use client';import Image from 'next/image';import {motion} from 'framer-motion';
-export default function ProductCard({product}){return(<motion.article whileHover={{y:-4,scale:1.01}} className='rounded-2xl bg-gray-900 border border-gray-800 p-4 flex flex-col'><div className='relative aspect-[4/3] w-full overflow-hidden rounded-xl mb-3 bg-black/20'><Image src={product.image} alt={product.title} fill className='object-cover' sizes='(max-width:768px) 100vw, 33vw'/></div><h3 className='font-semibold line-clamp-2 mb-1'>{product.title}</h3><p className='text-gray-400 text-sm mb-3'>{product.price}</p><a href={product.url} target='_blank' className='mt-auto inline-flex justify-center px-4 py-2 rounded-xl bg-brand-500 hover:bg-brand-600'>Ver oferta</a></motion.article>);}
+export default function ProductCard({ p }){
+  return (
+    <div className="card flex gap-4">
+      <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-gray-100">
+        <Image src={p.image} alt={p.title} fill sizes="96px" className="object-cover"/>
+      </div>
+      <div className="min-w-0">
+        <h3 className="font-semibold line-clamp-2">{p.title}</h3>
+        <div className="mt-1 text-sm text-gray-500">{p.price}</div>
+        <div className="mt-2">
+          <Link href={p.url} target="_blank" rel="nofollow noopener" className="rounded-lg bg-brand-600 px-3 py-1.5 text-white">
+            Ver oferta
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

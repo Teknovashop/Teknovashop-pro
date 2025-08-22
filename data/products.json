@@ -1,62 +1,65 @@
 [
   {
-    "id": "p1",
-    "title": "Smartwatch Active Inteligente (Pantalla HD)",
+    "id": 1,
+    "title": "Smartwatch Active Inteligente, Pantalla, Deportes",
     "price": "49,99 €",
-    "url": "https://www.amazon.es/Active-Inteligente-Smartwatch-Pantalla-Deportivos/dp/B0F8B2776S?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=2e0e569dc235fdfb4c3f17380f5cfef8&language=es_ES&ref_=as_li_ss_tl",
-    "image": "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=800&auto=format&fit=crop",
     "category": "tecnologia",
-    "featured": true
+    "featured": true,
+    "url": "https://www.amazon.es/Active-Inteligente-Smartwatch-Pantalla-Deportivos/dp/B0F8B2776S?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=2e0e569dc235fdfb4c3f17380f5cfef8&language=es_ES&ref_=as_li_ss_tl"
   },
   {
-    "id": "p2",
-    "title": "Mochila 40x20x25 (Cabina)",
+    "id": 2,
+    "title": "Mochila 40x20x25 (Cabina), portátil",
     "price": "19,95 €",
-    "url": "https://www.amazon.es/40x20x25-Equipaje-Mochilas-Ordenador-Port%C3%A1til/dp/B0D176VK55?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=8f88d7ee096b7e1892b8668376dd3e21&language=es_ES&ref_=as_li_ss_tl",
-    "image": "https://images.unsplash.com/photo-1521017432531-fbd92d1cf0b1?q=80&w=1200&auto=format&fit=crop",
-    "category": "hogar",
-    "featured": true
+    "image": "https://images.unsplash.com/photo-1520974735194-7f4b1d9b5b9b?q=80&w=800&auto=format&fit=crop",
+    "category": "deportes",
+    "featured": true,
+    "url": "https://www.amazon.es/40x20x25-Equipaje-Mochilas-Ordenador-Port%C3%A1til/dp/B0D176VK55?linkCode=ll1&tag=teknovashop25-21"
   },
   {
-    "id": "p3",
-    "title": "IOWODO Smartwatch con llamadas Bluetooth",
+    "id": 3,
+    "title": "Reloj inteligente IOWODO con llamadas",
     "price": "39,99 €",
-    "url": "https://www.amazon.es/IOWODO-Inteligente-Smartwatch-Llamadas-Bluetooth/dp/B0CGR2BSDV?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=139afc68a0eac1e0daa69621ff4af1ff&language=es_ES&ref_=as_li_ss_tl",
-    "image": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1518609571773-39b7d303a82f?q=80&w=800&auto=format&fit=crop",
     "category": "tecnologia",
-    "featured": true
+    "featured": true,
+    "url": "https://www.amazon.es/IOWODO-Inteligente-Smartwatch-Llamadas-Bluetooth/dp/B0CGR2BSDV?linkCode=ll1&tag=teknovashop25-21"
   },
   {
-    "id": "p4",
+    "id": 4,
     "title": "Cinturón CHAOREN automático",
     "price": "17,99 €",
-    "url": "https://www.amazon.es/CHAOREN-Cintur%C3%B3n-Pattern-Negro-90-100cm-Gesamtl%C3%A4nge/dp/B08T7JY5JM?th=1&psc=1&linkCode=ll1&tag=teknovashop25-21&linkId=8f6f59d2c991618de44847c19a789037&language=es_ES&ref_=as_li_ss_tl",
-    "image": "https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=1200&auto=format&fit=crop",
-    "category": "moda"
+    "image": "https://images.unsplash.com/photo-1544441892-221874a8d17e?q=80&w=800&auto=format&fit=crop",
+    "category": "belleza",
+    "featured": false,
+    "url": "https://www.amazon.es/CHAOREN-Cintur%C3%B3n-Pattern-Negro-90-100cm-Gesamtl%C3%A4nge/dp/B08T7JY5JM?linkCode=ll1&tag=teknovashop25-21"
   },
   {
-    "id": "p5",
-    "title": "Monedero AKIELO con bloqueo RFID",
+    "id": 5,
+    "title": "Tarjetero antirrobo AKIELO RFID",
     "price": "16,99 €",
-    "url": "https://www.amazon.es/AKIELO-Monedero-Bloqueo-Titular-Tarjeta/dp/B076FXWC3F?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=e1bfde11307b1fb20bb24165cd1a9421&language=es_ES&ref_=as_li_ss_tl",
-    "image": "https://images.unsplash.com/photo-1553729784-e91953dec042?q=80&w=1200&auto=format&fit=crop",
-    "category": "moda"
-  },
-  {
-    "id": "p6",
-    "title": "Auriculares Bluetooth TWS impermeables",
-    "price": "24,99 €",
-    "url": "https://www.amazon.es/Auriculares-Inal%C3%A1mbricos-Bluetooth-Inalambricos-Impermeable/dp/B0CCDNJS75?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=c6608debfcb4933f6ba9f938e011e990&language=es_ES&ref_=as_li_ss_tl",
-    "image": "https://images.unsplash.com/photo-1518441902111-a2bf71368c49?q=80&w=1200&auto=format&fit=crop",
-    "category": "tecnologia"
-  },
-  {
-    "id": "p7",
-    "title": "Kindle 2024 e‑reader",
-    "price": "Desde 109,99 €",
-    "url": "https://www.amazon.es/kindle-2024/dp/B0CP31JRLK?th=1&linkCode=ll1&tag=teknovashop25-21&linkId=d6e57a69592cd7b396d1fce26936077c&language=es_ES&ref_=as_li_ss_tl",
-    "image": "https://images.unsplash.com/photo-1587952844311-1f9e3e8a8f8d?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155223165f?q=80&w=800&auto=format&fit=crop",
     "category": "tecnologia",
-    "featured": true
+    "featured": false,
+    "url": "https://www.amazon.es/AKIELO-Monedero-Bloqueo-Titular-Tarjeta/dp/B076FXWC3F?linkCode=ll1&tag=teknovashop25-21"
+  },
+  {
+    "id": 6,
+    "title": "Auriculares inalámbricos Bluetooth IPX7",
+    "price": "25,99 €",
+    "image": "https://images.unsplash.com/photo-1518442932279-3c23fd9e1d89?q=80&w=800&auto=format&fit=crop",
+    "category": "tecnologia",
+    "featured": false,
+    "url": "https://www.amazon.es/Auriculares-Inal%C3%A1mbricos-Bluetooth-Inalambricos-Impermeable/dp/B0CCDNJS75?linkCode=ll1&tag=teknovashop25-21"
+  },
+  {
+    "id": 7,
+    "title": "Kindle 2024 e‑reader",
+    "price": "129,99 €",
+    "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
+    "category": "tecnologia",
+    "featured": true,
+    "url": "https://www.amazon.es/kindle-2024/dp/B0CP31JRLK?linkCode=ll1&tag=teknovashop25-21"
   }
 ]

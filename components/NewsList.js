@@ -1,1 +1,14 @@
-'use client';export default function NewsList({items=[]}){return(<section className='space-y-3'><h2 className='text-2xl font-bold'>Noticias tecnológicas</h2><div className='grid md:grid-cols-2 gap-4'>{items.map(n=>(<article key={n.id} className='rounded-2xl bg-gray-900 border border-gray-800 p-4'><div className='flex items-center gap-2 text-xs text-gray-400 mb-2'><span className='inline-flex px-2 py-1 rounded-full bg-gray-800'>{n.source}</span><time>{new Date(n.date||Date.now()).toLocaleString('es-ES')}</time></div><a href={n.link} target='_blank' className='text-brand-500 hover:underline text-lg font-semibold'>{n.title}</a></article>))}</div></section>);}
+export default function NewsList({ items }){
+  return (
+    <div className="space-y-3">
+      {items.map((n) => (
+        <a key={n.link} href={n.link} target="_blank" rel="nofollow noopener"
+           className="card block">
+          <div className="text-xs text-gray-500">{n.source}</div>
+          <div className="mt-1 font-semibold">{n.title}</div>
+          <div className="mt-1 text-sm text-gray-500">{n.pubDate}</div>
+        </a>
+      ))}
+    </div>
+  );
+}

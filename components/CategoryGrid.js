@@ -1,1 +1,20 @@
-'use client';import Link from 'next/link';import products from '@/data/products.json';export default function CategoryGrid(){const cats=Array.from(new Set(products.map(p=>p.category)));return(<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>{cats.map(c=>(<Link key={c} href={`/categories/${c}`} className='rounded-2xl bg-gray-900 border border-gray-800 p-6 hover:bg-gray-800/60 capitalize'><div className='text-xl font-semibold'>{c}</div><div className='text-sm text-gray-400 mt-1'>{products.filter(p=>p.category===c).length} productos</div></Link>))}</div>);}
+import Link from 'next/link';
+
+const CATS = [
+  { slug:'tecnologia', name:'Tecnología' },
+  { slug:'hogar', name:'Hogar' },
+  { slug:'belleza', name:'Belleza' },
+  { slug:'deportes', name:'Deportes' },
+];
+
+export default function CategoryGrid(){
+  return (
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {CATS.map(c => (
+        <Link key={c.slug} href={`/categories/${c.slug}`} className="card text-center font-semibold">
+          {c.name}
+        </Link>
+      ))}
+    </div>
+  );
+}

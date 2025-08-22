@@ -1,3 +1,39 @@
+'use client';
 
-'use client';import {useState} from 'react';
-export default function Newsletter(){const [email,setEmail]=useState('');const [status,setStatus]=useState(null);async function submit(e){e.preventDefault();setStatus('loading');try{const r=await fetch('/api/newsletter/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});const d=await r.json();setStatus(d.ok?'ok':'error');}catch{setStatus('error')}}return(<div className='max-w-lg mx-auto space-y-4'><h1 className='text-3xl font-bold'>Suscríbete al newsletter</h1><form onSubmit={submit} className='flex gap-2'><input className='flex-1 px-4 py-3 rounded-xl bg-gray-800 border border-gray-700' placeholder='tu@email.com' value={email} onChange={e=>setEmail(e.target.value)} required/><button className='px-4 py-3 rounded-xl bg-brand-500 hover:bg-brand-600'>Suscribirme</button></form>{status==='ok'&&<p className='text-emerald-300'>¡Listo!</p>}{status==='error'&&<p className='text-rose-300'>Ups, algo fue mal.</p>}</div>);}
+import { useState } from 'react';
+
+export default function NewsletterPage(){
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState(null);
+
+  const submit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    const res = await fetch('/api/newsletter/subscribe', {
+      method: 'POST', headers: { 'Content-Type':'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json();
+    setStatus(data.ok ? 'ok' : 'error');
+  };
+
+  return (
+    <div className="mx-auto max-w-md space-y-4">
+      <h1 className="text-2xl font-bold">Newsletter</h1>
+      <p>Recibe un resumen con noticias y ofertas tech.</p>
+      <form onSubmit={submit} className="flex gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={e=>setEmail(e.target.value)}
+          required
+          placeholder="Tu correo electrónico"
+          className="w-full rounded-xl border border-gray-300 px-3 py-2"
+        />
+        <button className="rounded-xl bg-brand-600 px-4 py-2 font-semibold text-white">Suscribirme</button>
+      </form>
+      {status === 'ok' && <div className="text-sm text-green-600">¡Suscrito!</div>}
+      {status === 'error' && <div className="text-sm text-red-600">No se pudo suscribir. Revisa el email.</div>}
+    </div>
+  );
+}

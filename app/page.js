@@ -1,7 +1,47 @@
+export const dynamic = 'force-dynamic';
 
-import { getNews } from '@/app/lib/news';
 import CarouselTop from '@/components/CarouselTop';
 import SidebarProducts from '@/components/SidebarProducts';
+import CategoryGrid from '@/components/CategoryGrid';
 import NewsList from '@/components/NewsList';
-export const revalidate=3600;
-export default async function Home(){const news=await getNews(6);return(<div className="grid grid-cols-1 lg:grid-cols-12 gap-6"><section className="lg:col-span-8 space-y-6"><header className="py-6"><h1 className="text-4xl md:text-5xl font-extrabold">La tienda <span className="text-brand-500">tech</span> con noticias y chollos<br/>actualizados cada día</h1><p className="mt-3 text-gray-300">Selección curada para comprar mejor.</p></header><CarouselTop/><NewsList items={news}/></section><aside className="lg:col-span-4"><SidebarProducts/></aside></div>);}
+
+async function fetchNews(){
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL ?? ''}/api/news`, { cache: 'no-store' });
+  if(!res.ok) return { items: [] };
+  return res.json();
+}
+
+export default async function Home(){
+  const { items } = await fetchNews();
+
+  return (
+    <div className="space-y-8">
+      <section className="hero-grad rounded-3xl p-8">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+          La tienda <span className="text-brand-600">tech</span> con noticias y chollos
+        </h1>
+        <p className="mt-2 max-w-2xl text-gray-600">
+          Selección curada de gadgets y electrónica que rinde en comisión. Actualizado diariamente.
+        </p>
+      </section>
+
+      <section className="grid gap-8 lg:grid-cols-3">
+        <div className="lg:col-span-2 space-y-6">
+          <CarouselTop />
+          <div>
+            <h2 className="mb-2 text-xl font-bold">Noticias tecnológicas</h2>
+            <NewsList items={items} />
+          </div>
+        </div>
+        <div>
+          <SidebarProducts />
+        </div>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-bold">Categorías</h2>
+        <CategoryGrid />
+      </section>
+    </div>
+  );
+}

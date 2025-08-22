@@ -1,4 +1,19 @@
+import products from '@/data/products.json';
+import ProductCard from '@/components/ProductCard';
 
-import products from '@/data/products.json';import ProductCard from '@/components/ProductCard';
-export async function generateStaticParams(){const cats=Array.from(new Set(products.map(p=>p.category)));return cats.map(c=>({slug:c}));}
-export default function Category({params}){const list=products.filter(p=>p.category===params.slug);return(<div className='space-y-6'><h1 className='text-3xl font-bold capitalize'>Categoría: {params.slug}</h1><div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>{list.map(p=><ProductCard key={p.id} product={p}/>)}</div></div>);}
+export async function generateStaticParams(){
+  const cats = Array.from(new Set(products.map(p => p.category))).map(slug => ({ slug }));
+  return cats;
+}
+
+export default function CategoryPage({ params }){
+  const items = products.filter(p => p.category === params.slug);
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold capitalize">Categoría: {params.slug}</h1>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map(p => <ProductCard key={p.id} p={p} />)}
+      </div>
+    </div>
+  );
+}
