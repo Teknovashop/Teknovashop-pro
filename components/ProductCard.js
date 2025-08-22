@@ -1,35 +1,38 @@
-'use client'
-import Image from 'next/image'
-import { useState } from 'react'
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function ProductCard({ product }) {
-  const [failed, setFailed] = useState(false)
-  const img = failed || !product.image ? '/images/placeholder-product.png' : product.image
+export default function ProductCard({ product = {} }) {
+  const {
+    title = 'Producto',
+    price,
+    url = '#',
+    image,
+    clickText = 'Ver oferta',
+  } = product || {};
+
+  const safeImage = image || '/images/placeholder-product.png';
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl border bg-white">
-      <div className="aspect-[4/3] overflow-hidden">
+    <div className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <div className="relative h-52 w-full overflow-hidden bg-gray-50">
         <Image
-          src={img}
-          alt={product.title}
+          src={safeImage}
+          alt={title}
           fill
-          sizes="(max-width:768px) 100vw, 33vw"
-          className="object-cover transition duration-700 group-hover:scale-105"
-          onError={() => setFailed(true)}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           priority={false}
+          unoptimized={true}
         />
       </div>
-      <div className="p-4">
-        <h3 className="font-semibold leading-tight">{product.title}</h3>
-        {product.price ? <div className="mt-1 font-bold text-brand-600">{product.price}</div> : null}
-        <a
-          href={product.url}
-          target="_blank"
-          className="mt-3 inline-flex items-center rounded-full bg-brand-600 px-4 py-2 text-white hover:bg-brand-700">
-          Ver oferta
-        </a>
+      <div className="p-4 space-y-2">
+        <h3 className="line-clamp-2 font-medium">{title}</h3>
+        {price ? <p className="text-sm text-gray-600">{price}</p> : null}
+        <Link href={url} target="_blank" rel="nofollow noopener" className="inline-flex items-center rounded-xl bg-brand-600 px-3 py-2 text-white hover:bg-brand-700 transition-colors text-sm">
+          {clickText}
+        </Link>
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/0 via-black/0 to-black/0 group-hover:via-black/5 group-hover:to-black/10 transition"></div>
     </div>
-  )
+  );
 }
