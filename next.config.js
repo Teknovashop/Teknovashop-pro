@@ -1,7 +1,13 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: { unoptimized: true }, // usamos <img> para evitar dominios externos
-  experimental: {  static: 0 } }
+  reactStrictMode: true,
+  // Allow external product/news images
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: '**' },
+      { protocol: 'http', hostname: '**' }
+    ]
+  }
 };
+
 module.exports = nextConfig;

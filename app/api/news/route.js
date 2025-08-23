@@ -1,53 +1,53 @@
-// app/api/news/route.js
+// Force dynamic execution; do not prerender
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 import Parser from 'rss-parser';
 
-export const dynamic = 'force-dynamic';          // avoid prerender at build
-export const revalidate = 0;                     // no static cache
-export const runtime = 'nodejs';                 // ensure Node runtime
+const parser = new Parser({
+  headers: {
+    'user-agent': 'Mozilla/5.0 (compatible; teknovashop/1.0)'
+  },
+  timeout: 10000
+});
 
-const parser = new Parser({ timeout: 8000 });
+const DEFAULT_FEEDS = [
+  'https://www.xataka.com/tag/inteligencia-artificial/rss2.xml',
+  'https://www.xataka.com/tag/tecnologia/rss2.xml',
+  'https://www.genbeta.com/feed',
+  'https://hipertextual.com/tag/tecnologia/feed',
+  'https://news.google.com/rss?hl=es-419&gl=ES&ceid=ES:es&q=inteligencia%20artificial%20OR%20tecnolog%C3%ADa'
+];
 
-function sanitizeList(list) {
-  return (list || '')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean)
-    .filter((u) => /^https?:\/\//i.test(u));
+function parseList(val) {
+  if (!val) return DEFAULT_FEEDS;
+  return val
+    .split(/[\n,]/)
+    .map(s => s.trim())
+    .filter(Boolean);
 }
 
 export async function GET() {
-  try {
-    const raw = process.env.NEWS_FEEDS_ES || '';
-    const feeds = sanitizeList(raw);
+  const feeds = parseList(process.env.NEWS_FEEDS_ES);
+  const items = [];
 
-    if (feeds.length === 0) {
-      return Response.json({ items: [] }, { status: 200 });
+  await Promise.all(feeds.map(async (url) => {
+    try {
+      const feed = await parser.parseURL(url);
+      const source = (feed?.title || new URL(url).hostname);
+      (feed?.items || []).slice(0, 20).forEach(it => {
+        items.push({
+          title: it.title || '',
+          link: it.link || '',
+          isoDate: it.isoDate || it.pubDate || null,
+          source
+        });
+      });
+    } catch (err) {
+      console.error('Feed fail', url, err?.message);
     }
+  }));
 
-    const results = await Promise.allSettled(
-      feeds.map(async (url) => {
-        try {
-          const feed = await parser.parseURL(url);
-          return (feed.items || []).slice(0, 10).map((i) => ({
-            title: i.title || '',
-            link: i.link || '',
-            isoDate: i.isoDate || i.pubDate || null,
-            source: feed.title || '',
-          }));
-        } catch {
-          return [];
-        }
-      })
-    );
-
-    const items = results
-      .map((r) => (r.status === 'fulfilled' ? r.value : []))
-      .flat()
-      .sort((a, b) => new Date(b.isoDate || 0) - new Date(a.isoDate || 0))
-      .slice(0, 30);
-
-    return Response.json({ items });
-  } catch (e) {
-    return Response.json({ items: [] });
-  }
+  items.sort((a,b) => new Date(b.isoDate || 0) - new Date(a.isoDate || 0));
+  return Response.json({ items: items.slice(0, 30) });
 }
