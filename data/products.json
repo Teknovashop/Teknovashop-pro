@@ -1,18 +1,34 @@
 [
   {
-    "id": 1,
+    "id": "p1",
     "title": "Smartwatch Active Inteligente",
-    "price": "49,99 €",
+    "price": 49.99,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop",
     "url": "https://amzn.to/4p6s84v",
-    "image": "",
-    "tag": "top"
+    "tag": [
+      "top",
+      "quick"
+    ]
   },
   {
-    "id": 2,
-    "title": "Mochila 40x20x25 (Cabina) portátil",
-    "price": "19,95 €",
+    "id": "p2",
+    "title": "Mochila 40x20x25 (Cabina)",
+    "price": 19.95,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop",
     "url": "https://amzn.to/4mxCloK",
-    "image": "",
-    "tag": "top"
+    "tag": [
+      "top"
+    ]
+  },
+  {
+    "id": "p3",
+    "title": "Reloj inteligente IOWODO con llamadas",
+    "price": 39.99,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop",
+    "url": "https://amzn.to/3JmywnM",
+    "tag": [
+      "top",
+      "quick"
+    ]
   }
 ]

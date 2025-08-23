@@ -1,7 +1,8 @@
-export const dynamic = 'force-dynamic';
-import { NextResponse } from 'next/server';
 import products from '@/data/products.json';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function GET() {
-  return NextResponse.json(products);
+  return Response.json({ products });
 }

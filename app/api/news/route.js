@@ -1,13 +1,10 @@
-// Force dynamic execution; do not prerender
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 import Parser from 'rss-parser';
 
 const parser = new Parser({
-  headers: {
-    'user-agent': 'Mozilla/5.0 (compatible; teknovashop/1.0)'
-  },
+  headers: { 'user-agent': 'Mozilla/5.0 (compatible; teknovashop/1.0)' },
   timeout: 10000
 });
 
@@ -21,10 +18,8 @@ const DEFAULT_FEEDS = [
 
 function parseList(val) {
   if (!val) return DEFAULT_FEEDS;
-  return val
-    .split(/[\n,]/)
-    .map(s => s.trim())
-    .filter(Boolean);
+  return val.split(/[
+,]/).map(s => s.trim()).filter(Boolean);
 }
 
 export async function GET() {
